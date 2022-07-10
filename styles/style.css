@@ -56,6 +56,7 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     height: 670px;
+    position: relative;
 }
 .header_presentation_title{
     font-family: 'Merriweather';
@@ -76,6 +77,32 @@ a{
     line-height: 25px;
     max-width: 270px;
     color: #FFFFFF;
+}
+.slider_buttons{
+    position: absolute;
+    bottom: 113px;
+    right: 405px;
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+}
+.slider_button_prev, .slider_button_next{ 
+    background-color: grey;
+    border: none;
+    width: 60px;
+    height: 60px;
+}
+.slider_button_prev{
+    background-image: url(../images/slider_button-prev.png);
+}
+.slider_button_prev:hover{
+    opacity: 0.6;
+}
+.slider_button_next{
+    background-image: url(../images/slider_button-next.png);
+}
+.slider_button_next:hover{
+    opacity: 0.6;
 }
 .our_services{
     padding-top: 140px;
