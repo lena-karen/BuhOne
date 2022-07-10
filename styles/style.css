@@ -1,4 +1,206 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 1920px;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.header_wrapper{
+    display: flex;
+    padding: 32px 0 42px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+}
+.logo_text{
+    font-family: 'Merriweather';
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 50px;
+    color: #005FA3;
+    margin-left: 30px;
+}
+.menu_item{
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #222222;
+    margin-left: 68px;
+    cursor: pointer;
+}
+.menu_item:first-child{
+    margin-left: 0;
+}
+.header_presentation_info{
+    display: flex;
+    flex-direction: column;
+    padding-top: 170px;
+}
+.header_presentation{
+    background-image: url(../images/header-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 670px;
+}
+.header_presentation_title{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 66px;
+    color: #FFFFFF;
+    max-width: 589px;
+}
+.header_presentation_link{
+    margin-top: 80px;
+    background: #005FA3;
+    padding: 19px 18px;
+    text-align: center;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 270px;
+    color: #FFFFFF;
+}
+.our_services{
+    padding-top: 140px;
+    background: #EBEBEB;
+    padding-bottom: 140px;
+}
+.our_services_text{
+    font-family: 'Lato';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33px;
+    color: #BDBDBD;
+}
+.our_services_block_title{
+    font-family: 'Merriweather';
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 69px;
+    color: #333333;
+    margin-top: 40px;
+    margin-bottom: 102px;
+}
+.our_services_block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.our_services_block_item{
+    background-image: url(../images/our_services-item-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 360px;
+    margin-bottom: 30px;
+}
+.our_services_block_item:hover{
+    opacity: 65%;;
+    
+}
+.our_services_block_item_text{
+    font-family: 'Lato';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin: 261px 0 0 45px;
+}
+.about_us{
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+.about_us_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.about_us_info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.about_us_info_text{
+    font-family: 'Lato';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33px;
+    color: #BDBDBD;
+    margin-bottom: 40px;
+}
+.about_us_info_title{
+    font-family: 'Merriweather';
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 69px;
+    color: #333333;
+}
+.about_us_info_title span{
+    color: #005FA3;
+}
+.about_us_info_desc{
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    margin-top: 60px;
+}
+.about_us_statistic{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+}
+.about_us_statistic_item{
+    padding-top: 30px;
+    padding-left: 40px;
+    background-color: #EBEBEB;
+    width: 255px;
+    height: 255px;
+}
+.about_us_statistic_item_value{
+    font-family: 'Lato';
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 66px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.about_us_statistic_item_text{
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    margin-bottom: 47px;
+}
+.about_us_statistic_item_link{
+    text-decoration: underline;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #005FA3;
 }
