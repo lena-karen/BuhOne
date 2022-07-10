@@ -78,6 +78,20 @@ a{
     max-width: 270px;
     color: #FFFFFF;
 }
+.slider_ellipse{
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 113px;
+    left: 405px;
+}
+.slider_ellipse_img{
+    opacity: 0.2;
+}
+.active{
+    opacity: 1;
+}
 .slider_buttons{
     position: absolute;
     bottom: 113px;
