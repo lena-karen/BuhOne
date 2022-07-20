@@ -6,6 +6,7 @@
 body{
     max-width: 1920px;
     font-style: normal;
+    margin: 0 auto;
 }
 a{
     text-decoration: none;
@@ -58,13 +59,20 @@ a{
     height: 670px;
     position: relative;
 }
-.header_presentation_title{
+.section_block_title{
     font-family: 'Merriweather';
-    font-weight: 700;
+    font-weight: 900;
     font-size: 48px;
-    line-height: 66px;
-    color: #FFFFFF;
+    line-height: 69px;
+    color: #333333;
+    margin-top: 40px;
+    margin-bottom: 102px;
+}
+.header_presentation_title{
+    font-weight: 700;
     max-width: 589px;
+    color: #FFFFFF;
+    margin: 0;
 }
 .header_presentation_link{
     margin-top: 80px;
@@ -86,10 +94,20 @@ a{
     bottom: 113px;
     left: 405px;
 }
-.slider_ellipse_img{
-    opacity: 0.2;
+.pagination{
+    cursor: pointer;
+    border-radius: 50%;
+    background: #FFFFFF;
+    opacity: 0.4;
+    width: 12px;
+    height: 12px;
+    display: block;
 }
-.active{
+.clients_page, .reviews_page{
+    background-color: #005FA3;
+}
+
+.active, .pagination:focus{
     opacity: 1;
 }
 .slider_buttons{
@@ -98,26 +116,27 @@ a{
     right: 405px;
     display: flex;
     align-items: center;
-    opacity: 0.5;
+   /* opacity: 0.5;*/
 }
 .slider_button_prev, .slider_button_next{ 
     background-color: grey;
-    border: none;
+    border: 1px solid grey;
     width: 60px;
     height: 60px;
+    opacity: 0.4;
+    cursor: pointer;
 }
 .slider_button_prev{
     background-image: url(../images/slider_button-prev.png);
 }
-.slider_button_prev:hover{
+.slider_button_prev:hover, .slider_button_next:hover{
     opacity: 0.6;
 }
 .slider_button_next{
-    background-image: url(../images/slider_button-next.png);
+    background-image: url(../images/slider_button-prev.png);
+    transform: rotate(-180deg);
 }
-.slider_button_next:hover{
-    opacity: 0.6;
-}
+
 .our_services{
     padding-top: 140px;
     background: #EBEBEB;
@@ -130,14 +149,9 @@ a{
     line-height: 33px;
     color: #BDBDBD;
 }
-.our_services_block_title{
-    font-family: 'Merriweather';
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 69px;
-    color: #333333;
-    margin-top: 40px;
-    margin-bottom: 102px;
+
+.title_margin{
+    margin-bottom: 0;
 }
 .our_services_block{
     display: flex;
@@ -179,7 +193,7 @@ a{
     display: flex;
     flex-direction: column;
 }
-.about_us_info_text{
+.section_text{
     font-family: 'Lato';
     font-weight: 900;
     font-size: 24px;
@@ -187,15 +201,11 @@ a{
     color: #BDBDBD;
     margin-bottom: 40px;
 }
-.about_us_info_title{
-    font-family: 'Merriweather';
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 69px;
-    color: #333333;
-}
+
 .name{
     color: #005FA3;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .about_us_info_desc{
     font-family: 'Lato';
@@ -256,4 +266,172 @@ a{
     font-size: 14px;
     line-height: 17px;
     color: #005FA3;
+}
+.our_clients{
+    background-color: #EBEBEB;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+/*.buttons_color{
+    background-color: #005FA3
+}*/
+.our_client_margin{
+    margin-bottom: 80px;
+}
+.our_clients_link{
+    width: 100%;
+}
+.our_clients_link{
+    margin-bottom: 100px;
+    text-align: center;
+}
+.client_name_padding{
+    margin-bottom: 0;
+}
+.reviews{
+    padding-top: 140px;
+    padding-bottom: 140px;
+    position: relative;
+
+}
+.reviews_slider{
+    background-color: #EBEBEB;
+    padding: 45px 95px;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 100px;
+}
+.reviews_author_name{
+    font-weight: 900;
+}
+.review_author_position{
+    font-size: 14px;
+    color: #4F4F4F;
+}
+.reviews_author_info{
+    display: flex;
+    margin-top: 58px;
+    justify-content: start;
+    align-items: center;
+}
+.reviews_author_text{
+    display: flex;
+    flex-direction: column;
+}
+.reviews_author_img{
+    margin-right: 35px;
+}
+.reviews-button, .clients{
+    background-color: #005FA3;
+}
+.feedback{
+    background: linear-gradient(0deg, 
+    rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+    url(saintp.jpg), #C4C4C4; 
+    padding-top: 122px;
+    padding-bottom: 140px;
+    color: white;
+}
+.feedback_wrapper{
+    display: flex;
+}
+.feedback_contacts{
+    width: 50%;
+}
+.feedback_title{
+    color: white;
+    margin-top: 0;
+}
+.feedback_contacts_text{
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    max-width: 445px;
+}
+.feedback_contacts_block{
+    display: flex;
+    align-items: center;
+}
+.feedback_contacts_phone, .feedback_contacts_email{
+    display: flex;
+    align-items: center;
+}
+.feedback_contacts_phone{
+    margin-right: 40px;
+}
+.feedback_phone_img{
+    height: 30px;
+}
+.feedback_contacts_link{
+    color: white;
+    margin-left: 15px;
+}
+.feedback_form{
+    width: 50%;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+.feedback_form_names{
+    display: flex;
+    justify-content: space-between;
+}
+.input_label, .message{
+    width: 255px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: start;
+}
+.feedback_input{
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    outline: none;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 255px;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 29px;
+    color: #BDBDBD;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+.message_input{
+    width: 100%;
+    resize: none;
+}
+.feedback_form_button{
+    margin-top: 50px;
+    padding: 19px 18px;
+    background-color: #005FA3;
+    color: white;
+    border: none;
+    align-self: flex-end;
+}
+.footer_wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
 }

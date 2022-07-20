@@ -26,10 +26,10 @@
         </div>
 
         <div class="header_presentation">
-            <div class="header_slider">
+            <div class="header_slider" data-slide = "1">
                 <div class="container">
                     <div class="header_presentation_info">
-                        <h1 class="header_presentation_title">Бухгалтерские услуги
+                        <h1 class="section_block_title header_presentation_title">Бухгалтерские услуги
                             в Санкт-Петербурге</h1>
                         <a href="#" class="header_presentation_link">Наша презентация 1</a>
                     </div>
@@ -37,30 +37,30 @@
                 </div>
             </div>
 
-            <div class="header_slider">
+            <div class="header_slider" data-slide = "2">
                 <div class="container">
                     <div class="header_presentation_info">
-                        <h1 class="header_presentation_title">Бухгалтерские услуги
+                        <h1 class="section_block_title header_presentation_title">Бухгалтерские услуги
                             в Санкт-Петербурге</h1>
                         <a href="#" class="header_presentation_link">Наша презентация 2</a>
                     </div>
                    
                 </div>
             </div>
-            <div class="header_slider">
+            <div class="header_slider" data-slide = "3">
                 <div class="container">
                     <div class="header_presentation_info">
-                        <h1 class="header_presentation_title">Бухгалтерские услуги
+                        <h1 class="section_block_title header_presentation_title">Бухгалтерские услуги
                             в Санкт-Петербурге</h1>
                         <a href="#" class="header_presentation_link">Наша презентация 3</a>
                     </div>
                  
                 </div>
             </div>
-            <div class="header_slider">
+            <div class="header_slider" data-slide = "4">
                 <div class="container">
                     <div class="header_presentation_info">
-                        <h1 class="header_presentation_title">Бухгалтерские услуги
+                        <h1 class="section_block_title header_presentation_title">Бухгалтерские услуги
                             в Санкт-Петербурге</h1>
                         <a href="#" class="header_presentation_link">Наша презентация 4</a>
                     </div>
@@ -68,14 +68,14 @@
                 </div>
             </div>
             <div class="slider_ellipse">
-                <img src="images/slider_ellipse.png" alt="ellipse" class="slider_ellipse_img">
-                <img src="images/slider_ellipse.png" alt="ellipse" class="slider_ellipse_img">
-                <img src="images/slider_ellipse.png" alt="ellipse" class="slider_ellipse_img">
-                <img src="images/slider_ellipse.png" alt="ellipse" class="slider_ellipse_img">
-            </div>
+                <button class="pagination header_page" data-page = "1" onclick="changeSlide(this)"></button>
+                <button class="pagination header_page" data-page = "2" onclick="changeSlide(this)"></button>
+                <button class="pagination header_page" data-page = "3" onclick="changeSlide(this)"></button>
+                <button class="pagination header_page" data-page = "4" onclick="changeSlide(this)"></button>    
+            </div>  
             <div class="slider_buttons">
-                <button class="slider_button_prev" onclick="increaseSliderIndex(-1)"></button>
-                <button class="slider_button_next" onclick="increaseSliderIndex(1)"></button>
+                <button class="slider_button_prev" onclick="increaseSliderIndex(-1, this)"></button>
+                <button class="slider_button_next" onclick="increaseSliderIndex(1, this)"></button>
             </div>
         </div>
 
@@ -85,8 +85,8 @@
     <main class="main">
         <section class="our_services">
             <div class="container">
-                <p class="our_services_text">Наши услуги</p>
-                <h4 class="our_services_block_title">Мы специализируемся</h4>
+                <p class="section_text">Наши услуги</p>
+                <h4 class="section_block_title">Мы специализируемся</h4>
                 <div class="our_services_block">
                     <div class="our_services_block_item">
                         <p class="our_services_block_item_text">Бухгалтерское
@@ -119,9 +119,9 @@
             <div class="container">
                 <div class="about_us_wrapper">
                     <div class="about_us_info">
-                        <p class="about_us_info_text">О нас</p>
-                        <h5 class="about_us_info_title">Компания</h5>
-                        <h5 class="about_us_info_title name">ИвановПром</h5>
+                        <p class="section_text">О нас</p>
+                        <h5 class="section_block_title title_margin">Компания</h5>
+                        <h5 class="section_block_title name">ИвановПром</h5>
                             <p class="about_us_info_desc">Lorem Ipsum - это текст-"рыба", часто используемый в 
                                 печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
                                  на латинице с начала XVI века. В то время некий безымянный печатник создал 
@@ -159,8 +159,176 @@
                 </div>
             </div>
         </section>
-        
+        <section class="our_clients">
+            <div class="container">
+                <p class="section_text">Наши клиенты</p>
+                <h4 class="section_block_title our_client_margin">С нами работают</h4>
+                <div class="our_clients_slider">
+                    <a href="#" class="our_clients_link" data-slide = "1">
+                        <p class="section_text client_name_padding">Microsoft1</p>
+                        <img src="images/our_clients_img.png" alt="photo" class="our_clients_img">
+                    </a>
+                    <a href="#" class="our_clients_link" data-slide = "2">
+                        <p class="section_text client_name_padding">Microsoft2</p>
+                        <img src="images/our_clients_img.png" alt="photo" class="our_clients_img">
+                    </a>
+                    <a href="#" class="our_clients_link" data-slide = "3">
+                        <p class="section_text client_name_padding">Microsoft3</p>
+                        <img src="images/our_clients_img.png" alt="photo" class="our_clients_img">
+                    </a>
+                    <a href="#" class="our_clients_link" data-slide = "4">
+                        <p class="section_text client_name_padding">Microsoft4</p>
+                        <img src="images/our_clients_img.png" alt="photo" class="our_clients_img">
+                    </a>
+                </div>
+            </div>
+            <div class="slider_ellipse">
+                <button class="pagination clients_page" data-page = "1" onclick="changeSlide(this)"></button>
+                <button class="pagination clients_page" data-page = "2" onclick="changeSlide(this)"></button>
+                <button class="pagination clients_page" data-page = "3" onclick="changeSlide(this)"></button>
+                <button class="pagination clients_page" data-page = "4" onclick="changeSlide(this)"></button>    
+            </div>  
+
+            <div class="slider_buttons buttons_color">
+                <button class="slider_button_prev clients" onclick="increaseSliderIndex(-1, this)"></button>
+                <button class="slider_button_next clients" onclick="increaseSliderIndex(1, this)"></button>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <p class="section_text">Отзывы</p>
+                <h4 class="section_block_title our_client_margin">Ваши благодарности</h4>
+
+                <div class="reviews_slider" data-slide="1">
+                    <p class="reviews_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.</p>
+                    <div class="reviews_author_info">
+                        <img src="images/reviews_author_img.jpg" alt="photo" class="reviews_author_img">
+                        <div class="reviews_author_text">
+                            <p class="reviews_author_name">Екатерина Иванова</p>
+                            <p class="review_author_position">Директор ООО “Раз-два”</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="reviews_slider" data-slide="2">
+                    <p class="reviews_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.</p>
+                    <div class="reviews_author_info">
+                        <img src="images/reviews_author_img.jpg" alt="photo" class="reviews_author_img">
+                        <div class="reviews_author_text">
+                            <p class="reviews_author_name">Екатерина Петрова</p>
+                            <p class="review_author_position">Директор ООО “Раз-два”</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="reviews_slider" data-slide="3">
+                    <p class="reviews_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.</p>
+                    <div class="reviews_author_info">
+                        <img src="images/reviews_author_img.jpg" alt="photo" class="reviews_author_img">
+                        <div class="reviews_author_text">
+                            <p class="reviews_author_name">Екатерина Сусанина</p>
+                            <p class="review_author_position">Директор ООО “Раз-два”</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="reviews_slider" data-slide="4">
+                    <p class="reviews_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cupiditate laboriosam quas eaque sit perferendis mollitia delectus illo placeat 
+                        illum dolorum.</p>
+                    <div class="reviews_author_info">
+                        <img src="images/reviews_author_img.jpg" alt="photo" class="reviews_author_img">
+                        <div class="reviews_author_text">
+                            <p class="reviews_author_name">Екатерина Семенова</p>
+                            <p class="review_author_position">Директор ООО “Раз-два”</p>
+                        </div>
+                        
+                    </div>
+                </div>
+   
+                <div class="slider_ellipse">
+                    <button class="pagination reviews_page" data-page = "1" onclick="changeSlide(this)"></button>
+                    <button class="pagination reviews_page" data-page = "2" onclick="changeSlide(this)"></button>
+                    <button class="pagination reviews_page" data-page = "3" onclick="changeSlide(this)"></button>
+                    <button class="pagination reviews_page" data-page = "4" onclick="changeSlide(this)"></button>    
+                </div>  
+    
+                <div class="slider_buttons buttons_color">
+                    <button class="slider_button_prev reviews-button" onclick="increaseSliderIndex(-1, this)"></button>
+                    <button class="slider_button_next reviews-button" onclick="increaseSliderIndex(1, this)"></button>
+                </div>
+            </div>
+        </section>
+        <section class="feedback">
+            <div class="container">
+                <div class="feedback_wrapper">
+                    <div class="feedback_contacts">
+                        <h4 class="section_block_title feedback_title">Связь с нами</h4>
+                        <p class="feedback_contacts_text">У вас остались вопросы? 
+                            Напишите нам - мы ответим в ближайшее время!</p>
+                        <div class="feedback_contacts_block">
+                                <div class="feedback_contacts_phone">
+                                    <img src="images/phone_img.png" alt="phone" class="feedback_phone_img">
+                                <a href="tel:+7111222344" class="feedback_contacts_link">+7 (111) 222-33-44</a>
+                                </div>
+                                <div class="feedback_contacts_email">
+                                    <img src="images/email_img.png" alt="email" class="feedback_phone_img">
+                                    <a href="mailto:order@bu-one.ru" class="feedback_contacts_link">order@bu-one.ru</a>
+                                </div>
+                          
+                        </div>
+                    </div>
+                    <form action="#" class="feedback_form" name="feedback">
+                        <div class="feedback_form_names">
+                            <label for="name" class="input_label">Имя
+                                <input type="text" class="feedback_input" placeholder="Иван" id = "name">
+                            </label>
+                        
+                            <label for="surname" class="input_label">Фамилия
+                                <input type="text" class="feedback_input" placeholder="Иванов" id = "surname">
+                            </label> 
+                        </div>
+                        <label for="message" class="message">Сообщение</label>
+                            <textarea rows = "3" class="feedback_input message_input" placeholder="Ваше сообщение" id = "message"></textarea>
+                         
+                        <button class="feedback_form_button">Отправить сообщение</button>
+                    </form>
+                
+                </div>
+                
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_wrapper">
+                <p class="footer_copyright">2019 (с) Все права защищены. БухОне.ру</p>
+                <p class="footer_developed">Разработано: BuhOne</p>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="js/main.js"></script>
 </html>
