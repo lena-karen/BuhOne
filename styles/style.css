@@ -20,6 +20,7 @@ a{
     padding: 32px 0 42px;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .logo{
     display: flex;
@@ -31,6 +32,9 @@ a{
     line-height: 50px;
     color: #005FA3;
     margin-left: 30px;
+}
+.menu_bar{
+    display: none;
 }
 .menu_item{
     font-family: 'Lato';
@@ -434,4 +438,112 @@ a{
     font-size: 14px;
     line-height: 19px;
     color: #000000;
+}
+
+@media (max-width: 760px) {
+    .container{
+        width: 600px;
+    }    
+    .header_wrapper{
+        padding: 20px 0 30px;
+    }
+    .menu_bar{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 0;
+    }
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 5;
+    }
+    .menu_item{
+        color: white;
+        border-bottom: 1px solid white;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    .menu_bar:hover ~.menu{
+        display: flex;
+    }
+    .menu_bar p{
+        font-size: 70px;
+    }
+    .menu:hover{
+        display: flex;
+    }
+    .header_presentation_info{
+        padding-top: 180px;
+    }
+    .section_block_title{
+        text-align: center;
+    }
+    .header_presentation_link{
+        margin-top: 70px;
+    }
+    .slider_ellipse{
+        left: 85px;
+    }
+    .slider_buttons{
+        right: 120px;
+    }
+    .our_services_block_item{
+        width: 100%;
+    }
+    .about_us_wrapper{
+        flex-direction: column;
+    }
+    .about_us_info{
+        width: 100%;
+    }
+    .about_us_statistic{
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+    .about_us_statistic_item{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 71px;
+    }
+    .about_us_statistic_item_text, 
+    .about_us_statistic_item_value,
+    .about_us_statistic_item_link{
+        margin: 0;
+    }
+    .buttons_color{
+        right: 80px;
+    }
+    .feedback{
+        padding-top: 30px;
+    }
+    .feedback_contacts{
+        width: 100%;
+    }
+    .feedback_contacts_block{
+        justify-content: space-between;
+    }
+    .feedback_contacts_phone, .feedback_contacts_email{
+        width: 50%;
+    }
+    .feedback_wrapper{
+        flex-direction: column;
+    }
+    .section_block_title{
+        margin-bottom: 0;
+    }
+    .feedback_contacts_text{
+        margin-top: 44px;
+        max-width: 100%;
+    }
+    .feedback_form{
+        margin-top: 160px;
+        width: 100%;
+    }
 }
