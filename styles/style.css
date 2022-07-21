@@ -12,8 +12,9 @@ a{
     text-decoration: none;
 }
 .container{
-    max-width: 1110px;
+    width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 .header_wrapper{
     display: flex;
@@ -35,6 +36,11 @@ a{
 }
 .menu_bar{
     display: none;
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .menu_item{
     font-family: 'Lato';
@@ -95,8 +101,8 @@ a{
     width: 140px;
     justify-content: space-between;
     position: absolute;
-    bottom: 113px;
-    left: 405px;
+    top: 120px;
+    left: 0;
 }
 .pagination{
     cursor: pointer;
@@ -116,11 +122,19 @@ a{
 }
 .slider_buttons{
     position: absolute;
-    bottom: 113px;
-    right: 405px;
+    top: 70px;
+    right: 0;
     display: flex;
     align-items: center;
    /* opacity: 0.5;*/
+}
+.our_clients_ellipse{
+    top: auto;
+    bottom: 0;
+}
+.reviews_ellipse{
+    bottom: 0;
+    top: auto;
 }
 .slider_button_prev, .slider_button_next{ 
     background-color: grey;
@@ -158,9 +172,9 @@ a{
     margin-bottom: 0;
 }
 .our_services_block{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    grid-gap: 4%;
 
 }
 .our_services_block_item{
@@ -170,7 +184,7 @@ a{
     background-size: cover;
     width: 350px;
     height: 360px;
-    margin-bottom: 30px;
+    
 }
 .our_services_block_item:hover{
     opacity: 65%;;
@@ -196,6 +210,7 @@ a{
     width: 50%;
     display: flex;
     flex-direction: column;
+    padding-right: 20px;
 }
 .section_text{
     font-family: 'Lato';
@@ -220,9 +235,11 @@ a{
     margin-top: 60px;
 }
 .about_us_statistic{
+    width: 50%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+   /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);*/
     grid-row-gap: 30px;
     grid-column-gap: 30px;
 }
@@ -232,6 +249,7 @@ a{
     background-color: #EBEBEB;
     width: 255px;
     height: 255px;
+    justify-self: end;
 }
 .about_us_statistic_item:hover p{
     color: white;
@@ -277,9 +295,13 @@ a{
     padding-bottom: 100px;
     position: relative;
 }
-/*.buttons_color{
-    background-color: #005FA3
-}*/
+.our_clients_slider{
+    padding-bottom: 100px;
+}
+.buttons_color{
+    bottom: 0;
+    top: auto;
+}
 .our_client_margin{
     margin-bottom: 80px;
 }
@@ -287,7 +309,6 @@ a{
     width: 100%;
 }
 .our_clients_link{
-    margin-bottom: 100px;
     text-align: center;
 }
 .client_name_padding{
@@ -439,11 +460,30 @@ a{
     line-height: 19px;
     color: #000000;
 }
-
+@media (max-width: 1330px) {
+    .our_services_block{
+        justify-content: space-around;
+    }
+}
+@media (max-width: 1350px) {
+    .about_us_wrapper{
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .about_us_info, .about_us_statistic{
+        width: 100%;
+    }
+    .about_us_statistic_item{
+        justify-self: center;
+    }
+   /* .about_us_statistic{
+        grid-template-columns: repeat(auto-fit, 255px);
+    }*/
+}
 @media (max-width: 760px) {
-    .container{
+   /* .container{
         width: 600px;
-    }    
+    } */   
     .header_wrapper{
         padding: 20px 0 30px;
     }
@@ -486,12 +526,12 @@ a{
     .header_presentation_link{
         margin-top: 70px;
     }
-    .slider_ellipse{
+    /*.slider_ellipse{
         left: 85px;
     }
     .slider_buttons{
         right: 120px;
-    }
+    }*/
     .our_services_block_item{
         width: 100%;
     }
@@ -500,6 +540,7 @@ a{
     }
     .about_us_info{
         width: 100%;
+   
     }
     .about_us_statistic{
         grid-template-columns: 1fr;
@@ -517,9 +558,9 @@ a{
     .about_us_statistic_item_link{
         margin: 0;
     }
-    .buttons_color{
+    /*.buttons_color{
         right: 80px;
-    }
+    }*/
     .feedback{
         padding-top: 30px;
     }
@@ -536,7 +577,11 @@ a{
         flex-direction: column;
     }
     .section_block_title{
+        margin-top: 0;
         margin-bottom: 0;
+    }
+    .title_margin, .name, .feedback_title{
+        text-align: start;
     }
     .feedback_contacts_text{
         margin-top: 44px;
